@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear productos</title>
+    <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+    <div>
+        <img class="centrado" src="./image/gym.png" alt="logo" width="220px">
+    </div>
+	<h1>Productos</h1>
+	<p th:text="${nombre}">xx</p>
+    <div>
+        <table>
+            
+            <tr>
+                <th>Identificador</th>
+                <th>Nombre</th>
+                <th>descripcion</th>
+                <th>pvp</th>
+                <th>SN</th>
+                <th>imagen</th>
+                <th>stock</th>
+                <th>rebajado</th>    
+                <th>borrar</th>
+                
+            </tr>
+            <tr th:each="productos: ${tipos_productos}">
+    			<td th:text="${productos.identificador}" />
+                <td th:text="${productos.nombre}" />
+    			<td th:text="${productos.descripcion}" />
+                <td th:text="${productos.pvp}" />
+                <td th:text= "${productos.sn}" />
+                <td>
+    				<img th:src="${productos.imagen}" width='50px'/>
+  				</td> 
+  				              
+                <td th:text="${productos.stock}" />  
+                <td th:text="${productos.rebajado}? 'Sí': 'No'"  />      
+    			<td><a th:href="@{borrarProductos(id=${productos.identificador})}">Borrar</a></td>
+    			
+			</tr>
+        </table>
+    </div>
+    <div>
+        <form method="get" action="/crearProductos">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="descripcion" placeholder="descripcion">
+     
+            <input type="number" name="pvp" step=".01" placeholder="pvp">
+            
+            <input type="text" name="sn" placeholder="número de serie">
+            
+           	<input type="text" name= "imagen" placeholder="imagen">
+           	<input type="number" name="stock" placeholder="Stock">
+		
+            <label for="rebajado">Rebajado</label>
+            <input type="checkbox" id="rebajado" name="rebajado" placeholder="Rebajado">
+            
+            
+            
+            
+            <input type="submit" value="Crear">
+        </form>
+        </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#box{
+    padding: 0px;
+    width: 75%;
+	margin: auto;
+}
+
+body{
+	background: white;
+}
+
+.imp{
+    float: right;
+    margin-right:10px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+header{
+	width: 100%;
+    
+}
+
+.centrado1{
+	display: inline;
+	width: 220px;
+}
+.centrado{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.navegacion{
+	width: 1200px;
+	margin: 30px auto;
+	background: silver;
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #353535;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color: rgba(255, 68, 0, 0.846);
+	transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: #333333;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+.cabe{
+	text-align: center;
+    color: rgba(255, 68, 0, 0.815);
+}
+.cabe1{
+	width: 220px;
+	margin-left: 225px;
+}
+
+.cabe3{
+	text-align: center;
+
+}
+
+footer{
+    margin-left: 450px;
+    background-color: silver;
+    width:60%;
+	text-align: center;
+    font-size: 23px;
+    padding: 20px;   
+}
+
+.navegacion2 {
+    width: 700px;
+	margin: 30px auto;
+	background: silver;
+}
+
+.navegacion2 ul{
+    list-style: none;
+}
+
+.menu2 > li{
+	position: relative;
+	display: inline-block;
+}
+.menu2 > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: #353535;
+	font-family: 'Open sans';
+	text-decoration: none;
+   
+}
+
+.menu2 li a:hover{
+	color: rgba(255, 68, 0, 0.846);
+	transition: all .3s;
+}
+
+main{
+    margin-top: 10px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;/* Ajusta con espacio entre fichas */
+}
+  
+.card {
+    flex: 0 1 25%; /* 0-flex-grow (crece) 1-flex-shrink (encoge) flex-basics (tamaÃ±o) */
+
+    margin-bottom: 10px;
+    margin-right: 2px;
+    margin-left: 2px;
+    padding: 15px;
+}
+
+.card img{
+    width:40%;
+}
+
+.precio-producto{
+    padding: 20px;
+    color: rgba(0, 0, 0, 0.846);
+    text-align: center;
+   
+}
+
+.nombre-producto{
+    width: 65%;
+    color:rgb(60, 36, 194);
+    font-size:15px;
+}
+
+.nombre-productos{
+	color:black;
+	
+
+}
+
+.copi{
+	padding:20px;
+	color: rgba(255, 68, 0, 0.837); 
+	
+}
+
+.deport{
+	float: right;
+	margin: 0px;
+	width:350px;
+	margin-right:300px;
+
+}
+
+.mujer{
+	float: left;
+	width: 300px;
+	margin-left: 300px;
+}

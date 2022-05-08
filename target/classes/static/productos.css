@@ -1,0 +1,33 @@
+
+body{
+	width: 65%;
+	text-align: center;
+	margin: auto;
+	background-image: url(https://cdn2.hubspot.net/hubfs/5809316/clasificacion-de-los-deportes.jpg);
+	background-size: cover;
+
+}
+
+td {
+	
+	background-color:rgba(255, 68, 0, 0.636);
+	color: aliceblue;
+}
+
+h1{
+	color: rgba(255, 68, 0, 0.87);
+	
+}
+
+#bootadmi{
+	margin: 20px;
+
+}
+tr{
+	border: aqua;
+}
+th{
+	color: aliceblue;
+	
+
+}

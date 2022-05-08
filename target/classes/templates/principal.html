@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>strongGym</title>
+</head>
+
+<body>
+    <div id="box">
+       
+        <header>
+            
+            <div>
+            
+                <div>
+                    <div>
+                        <img class="mujer" src="./image/mujer.png" alt="">
+                        <img class="cabe1" src="./image/gym.png" alt="logo">
+                        <img class="deport" src="./image/hombre.png" alt="deport">
+                    </div>
+                   
+                    
+                    <h1 class="cabe">STRONG GYM Tu tienda de deporte</h1>
+                
+                    <h2 class="cabe3"></h2>
+                    
+                </div>
+              
+            </div>
+        </div>
+
+
+            <nav class="navegacion">
+
+                <img class="imp" src="./image/usuario.png" alt="usuario" width="35px" style="color: azure;">
+                <img class="imp" src="./image/cesta.png" alt="cesta compra" width="35px">
+
+                <form>
+                    <button class="imp" type="submit">Buscar</button>
+                    <input class="imp" type="text" name="buscar" placeholder="Buscar y pulse enter">
+
+                </form>
+                <ul class="menu">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sevicios</a>
+                        <ul class="submenu">
+                            <li><a href="#">Entrenamiento</a></li>
+                            <li><a href="#">Personal trainer</a></li>
+                            <li><a href="#">Nutricion</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Marcas</a>
+                        <ul class="submenu">
+                            <li><a href="a">AMIX</a></li>
+                            <li><a href="d">VICTORY ENDURANCE</a></li>
+                            <li><a href="d">INFISPORT</a></li>
+                            <li><a href="d">WEIDER</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Productos Alimentación complementarios</a>
+                        <ul class="submenu">
+                            <li><a href="#">Proteínas</a></li>
+                            <li><a href="#">Carboidratos</a></li>
+                            <li><a href="v">Barritas</a></li>
+                            <li><a href="#">Sin Gluten</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="">Productos de Ciclismo</a>
+                        <ul class="submenu">
+                            <li><a href="#">Cantimploras</a></li>
+                            <li><a href="#">Llantas de bici</a></li>
+                            <li><a href="#">Sillines</a></li>
+                            <li><a href="#">luces para montan bike</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="">Productos Montaña</a>
+                        <ul class="submenu">
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="">Productos de Natación</a>
+                        <ul class="submenu">
+                            <li><a href="#">Gafas de natación</a></li>
+                            <li><a href="#">Bañadores</a></li>
+                            <li><a href="#">gorros piscina</a></li>
+                            <li><a href="#">Toallas y albornoces</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+        <div>
+            <img class="centrado"
+                src="https://cdn1.bulevip.com/modules/homeslider/images_desktop/f92c24a0ae0868a7bb737a5557a883fe.jpg">
+
+        </div>
+        <main id="main">
+            <section class="cards">
+                <article class="card" th:each="productos: ${tipos_productos}">
+                    <div>
+                        <img th:src="${productos.imagen}" width="50px"/>
+                    </div>
+                    <div class="nombre-productos">
+                        <span th:text="${productos.nombre}"></span>
+                    </div>
+                    <div class="nombre-producto">
+                        <span th:text="${productos.descripcion}"></span>
+                    </div>
+                    <div class="precio-producto">
+                        <span th:text="${productos.pvp}+€"></span>
+                    </div>
+                </article>
+
+            </section>
+        </main>
+    </div>
+    <footer>
+        <nav class="navegacion2">
+            <ul class="menu2">
+                <li><a href="">Quines somos</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Trabaja con nosotros</a></li>
+                <li><a href="">Aviso legal</a></li>
+            </ul>
+        </nav>
+        <img class="redes" src="./image/facebook.webp" alt="facebook" width="50px">
+        <img class="redes" src="./image/instagram.webp" alt="instagram" width="50px">
+        <img class="redes" src="./image/twitter.webp" alt="Twitter" width="50px">
+        <img class="redes" src="./image/what.webp" alt="what" width="50px">
+
+        <p class="copi">©Strong Gym 2022</p>
+    </footer>
+
+</body>
+
+</html>
